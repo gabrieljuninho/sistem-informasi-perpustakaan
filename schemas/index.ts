@@ -11,3 +11,12 @@ export const RegisterSchema = z.object({
     message: "Kata sandi minimal harus 6 karakter",
   }),
 });
+
+export const LoginSchema = z.object({
+  email: z.string().email({
+    message: "Alamat email harus diisi",
+  }),
+  password: z.string().min(6, {
+    message: "Kata sandi minimal harus 6 karakter",
+  }),
+});

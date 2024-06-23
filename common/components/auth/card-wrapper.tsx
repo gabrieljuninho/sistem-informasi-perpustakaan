@@ -14,12 +14,7 @@ import BackButton from "@/common/components/auth/back-button";
 
 import { ICardWrapperProps } from "@/common/types/components";
 
-const CardWrapper: FC<ICardWrapperProps> = ({
-  children,
-  headerLabel,
-  backButtonLabel,
-  backButtonHref,
-}) => {
+const CardWrapper: FC<ICardWrapperProps> = ({ children, headerLabel }) => {
   return (
     <div className="h-screen w-screen">
       <div className="flex h-full items-center justify-center">
@@ -28,9 +23,6 @@ const CardWrapper: FC<ICardWrapperProps> = ({
             <Header label={headerLabel} />
           </CardHeader>
           <CardContent>{children}</CardContent>
-          <CardFooter>
-            <BackButton label={backButtonLabel} href={backButtonHref} />
-          </CardFooter>
         </Card>
       </div>
     </div>

@@ -12,6 +12,4 @@ export interface IHeaderProps {
 export interface ICardWrapperProps {
   children: ReactNode;
   headerLabel: string;
-  backButtonLabel: string;
-  backButtonHref: string;
 }
